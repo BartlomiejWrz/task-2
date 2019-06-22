@@ -1,9 +1,10 @@
 import React from 'react';
+import classes from "./Footer.module.css"
 
 const Footer = () => {
 	return (
-		<div>
-			create by Bartłomiej Wrzesiński
+		<div className={classes.footer}>
+			created by Bartłomiej Wrzesiński
 	</div>
 	)
 }

@@ -1,11 +1,11 @@
-.header {
+.footer {
   display: flex;
 	flex-direction: column;
 	justify-content: center;
-	flex-basis: 30vh;
+	flex-basis: 10vh;
 	min-width: 90vw;
   position: relative;
   margin: 0 auto;
 	color: #222;
-	background-color: blue;
+	background-color: red;
 }

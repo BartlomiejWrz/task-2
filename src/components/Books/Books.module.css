@@ -1,6 +1,7 @@
 .books {
   display: flex;
-  flex-direction: column;
+	flex-direction: column;
+	justify-content: center;
 	flex-basis: 60vh;
 	min-width: 90vw;
   position: relative;
