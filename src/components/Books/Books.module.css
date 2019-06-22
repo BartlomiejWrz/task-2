@@ -1,0 +1,10 @@
+.books {
+  display: flex;
+  flex-direction: column;
+	flex-basis: 60vh;
+	min-width: 90vw;
+  position: relative;
+  margin: 0 auto;
+	color: #222;
+	background-color:green;
+}
