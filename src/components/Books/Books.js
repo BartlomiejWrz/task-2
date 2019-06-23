@@ -29,22 +29,11 @@ class Books extends Component {
 			.catch(console.log(error => console.log(error)))
 	}
 
-	// handleDownloadUsers = () => {
-	// 	this.state.users.map(user => (
-	// 		<div key={user.login.uuid}>
-	// 			<h4>{`${user.name.first} ${user.name.last}`}</h4>
-	// 		</div>
-	// 	));
-	// }
 
 	render() {
 		const users = this.state.users;
 		return (
 			<div className={classes.books} >
-
-				{/* <DownloadButton click={this.handleDownloadUsers}> > */}
-				{/* {this.state.users ? <div>{this.handleDownloadUsers}<div /> : this.state.users} */}
-
 				{users ? <UsersList users={users} /> : users}
 			</div >
 		)
