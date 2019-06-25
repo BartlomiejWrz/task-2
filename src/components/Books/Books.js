@@ -28,11 +28,12 @@ class Books extends Component {
 	}
 
 	handleDeleteUser = (e) => {
-		let arr_number = e.target.parentNode
-		console.log(arr_number)
 		e.target.parentNode.remove();
-		// console.log(this.state.users)
+	}
 
+	handleChangeData = (e) => {
+		e.preventDefault();
+		console.log(e.target.form.name.value, e.target.form.lastName.value)
 	}
 
 
@@ -40,7 +41,7 @@ class Books extends Component {
 		const users = this.state.users;
 		return (
 			<div className={classes.books} >
-				{users ? <UsersList users={users} click={this.handleDeleteUser} /> : users}
+				{users ? <UsersList users={users} delete={this.handleDeleteUser} change={this.handleChangeData} /> : users}
 			</div >
 		)
 	}
