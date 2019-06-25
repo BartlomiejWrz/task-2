@@ -27,8 +27,12 @@ class Books extends Component {
 			})
 	}
 
-	handleDeleteUser = () => {
-		console.log("kasuje")
+	handleDeleteUser = (e) => {
+		let arr_number = e.target.parentNode
+		console.log(arr_number)
+		e.target.parentNode.remove();
+		// console.log(this.state.users)
+
 	}
 
 
