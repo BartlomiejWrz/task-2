@@ -32,7 +32,7 @@ class Books extends Component {
 	}
 
 	handleChangeData = (e) => {
-		e.preventDefault();
+		// e.preventDefault();
 		console.log(e.target.form.name.value, e.target.form.lastName.value)
 	}
 

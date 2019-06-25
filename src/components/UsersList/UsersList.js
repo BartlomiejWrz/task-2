@@ -1,9 +1,10 @@
 import React from 'react';
+import classes from "./UsersList.module.css"
 
 const UsersList = props => {
 
 	const users = props.users.map(user => (
-		<li key={user.login.uuid}>
+		<li className={classes.li} key={user.login.uuid}>
 			<h4>{`${user.name.first} ${user.name.last}`}</h4>
 			<button onClick={props.delete}>DELETE</button>
 			<form name="form">
@@ -14,7 +15,7 @@ const UsersList = props => {
 		</li>
 	))
 	return (
-		<ul>
+		<ul className={classes.ul}>
 			{users}
 		</ul>
 	);
