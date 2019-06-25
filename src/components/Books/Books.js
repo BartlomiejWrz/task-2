@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classes from "./Books.module.css"
 
-import UsersList from "../DownloadButton/DownloadButton";
+import UsersList from "../UsersList/UsersList";
 
 
 const API = 'https://randomuser.me/api/?results=5';
@@ -15,7 +15,6 @@ class Books extends Component {
 		fetch(API)
 			.then(response => {
 				if (response.ok) {
-					console.log(response)
 					return response;
 				}
 				throw Error(response.status)
@@ -26,7 +25,10 @@ class Books extends Component {
 					users: data.results
 				})
 			})
-			.catch(console.log(error => console.log(error)))
+	}
+
+	handleDeleteUser = () => {
+		console.log("kasuje")
 	}
 
 
@@ -34,7 +36,7 @@ class Books extends Component {
 		const users = this.state.users;
 		return (
 			<div className={classes.books} >
-				{users ? <UsersList users={users} /> : users}
+				{users ? <UsersList users={users} click={this.handleDeleteUser} /> : users}
 			</div >
 		)
 	}
