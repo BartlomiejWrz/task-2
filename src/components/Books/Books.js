@@ -29,11 +29,43 @@ class Books extends Component {
 
 	handleDeleteUser = (e) => {
 		e.target.parentNode.remove();
+		// console.log(e.target.form.name.placeholder)
+
+		// for (let i = 0; i < this.state.users.length; i++) {
+		// 	let name = e.target.form.name.placeholder
+		// 	if (this.state.users[i].name.first === name) {
+		// 		console.log(i)
+		// 		this.setState({
+		// 			users: {
+		// 				[i]: "",
+		// 			}
+		// 		})
+
+		// 	}
+		// }
 	}
 
 	handleChangeData = (e) => {
-		// e.preventDefault();
-		console.log(e.target.form.name.value, e.target.form.lastName.value)
+		console.log(e.target.form.name.value, e.target.form.lastName.value);
+
+		// for (let i = 0; i < this.state.users.length; i++) {
+		// 	let name = e.target.form.name.placeholder
+		// 	let newName = e.target.form.name.value;
+		// 	let newLastName = e.target.form.lastName.value;
+		// 	if (this.state.users[i].name.first === name) {
+		// 		console.log(i)
+		// 		this.setState({
+		// 			users: {
+		// 				[i]: {
+		// 					name: {
+		// 						first: newName,
+		// 						last: newLastName,
+		// 					}
+		// 				}
+		// 			}
+		// 		})
+		// 	}
+		// }
 	}
 
 
