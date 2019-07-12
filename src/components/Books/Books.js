@@ -27,22 +27,13 @@ class Books extends Component {
 			})
 	}
 
-	handleDeleteUser = (e) => {
-		e.target.parentNode.remove();
-		// console.log(e.target.form.name.placeholder)
-
-		// for (let i = 0; i < this.state.users.length; i++) {
-		// 	let name = e.target.form.name.placeholder
-		// 	if (this.state.users[i].name.first === name) {
-		// 		console.log(i)
-		// 		this.setState({
-		// 			users: {
-		// 				[i]: "",
-		// 			}
-		// 		})
-
-		// 	}
-		// }
+	handleDeleteUser = (uuid) => {
+		console.log(uuid)
+		let users = [...this.state.users];
+		users = users.filter(user => user.login.uuid !== uuid)
+		this.setState({
+			users
+		})
 	}
 
 	handleChangeData = (e) => {
