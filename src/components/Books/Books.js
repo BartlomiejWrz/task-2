@@ -43,6 +43,7 @@ class Books extends Component {
 
 	render() {
 		const users = this.state.users;
+		console.log(users)
 		return (
 			<div className={classes.books} >
 				{users ? <UsersList users={users} delete={this.handleDeleteUser} change={this.handleChangeData} /> : users}
